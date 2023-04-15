@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+    <t t-extend="mail.widget.Thread.Message">
+        <t t-jquery="span.o_thread_tooltip_container" t-operation="after">
+            <span t-if="options.displayEmailIcons">
+                <t t-if="message.getEmailStatus() === 'sent'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-success fa fa-envelope"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+                <t t-elif="message.getEmailStatus() === 'exception'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-danger fa fa-envelope"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+                <t t-elif="message.getEmailStatus() === 'bounce'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-warning fa fa-envelope"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+                <t t-elif="message.getEmailStatus() === 'outgoing'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-primary fa fa-envelope"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+                <t t-elif="message.getEmailStatus() === 'calendar'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-success fas fa-calendar-alt"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+                <t t-elif="message.getEmailStatus() === 'exception_calendar'">
+                    <i
+                        class="o_thread_email_tooltip o_thread_message_email text-danger fas fa-calendar-alt"
+                        t-att-data-message-id="message.getID()"
+                    />
+                </t>
+            </span>
+        </t>
+        <t t-jquery="span.o_thread_tooltip_container" t-operation="attributes">
+            <attribute name="class" value="o_thread_tooltip_container d-none" />
+        </t>
+    </t>
+    <t t-name="mail.widget.Thread.Message.MailTooltip.email">
+        <div>
+            <div t-foreach="data" t-as="EmailData">
+                <span class="d-inline-block text-center o_thread_tooltip_icon">
+                    <i t-if="EmailData[3] === 'sent'" class='fa fa-envelope text-success' title="Sent" role="img" aria-label="Sent" />
+                    <i
+                        t-if="EmailData[3] === 'outgoing'"
+                        class='fa fa-envelope text-primary'
+                        title="Outgoing"
+                        role="img"
+                        aria-label="Outgoing"
+                    />
+                    <i t-if="EmailData[3] === 'exception'" class='fa fa-envelope text-danger' title="Error" role="img" aria-label="Error" />
+                    <i
+                        t-if="EmailData[3] === 'bounce'"
+                        class='fa fa-envelope text-warning'
+                        title="Warning"
+                        role="img"
+                        aria-label="Warning"
+                    />
+                    <i t-if="EmailData[3] === 'received'" class='fa fa-envelope' title="Received" role="img" aria-label="Received" />
+                    <i t-if="EmailData[3] === 'canceled'" class='fa fa-envelope' title="Canceled" role="img" aria-label="Canceled" />
+                    <i
+                        t-if="EmailData[3] === 'calendar'"
+                        class="fas fa-calendar-alt"
+                        title="Calendar event"
+                        role="img"
+                        aria-label="Calendar"
+                    />
+                </span>
+                <b>
+                    <span t-esc="EmailData[1]" />
+                </b>
+                <span t-esc="EmailData[2]" />
+                <br />
+                <t t-if="EmailData[4] and EmailData[3] === 'bounce'">
+                    <span>Warning message:</span>
+                    <span t-esc="EmailData[4]" style="color:olive" />
+                </t>
+                <t t-elif="EmailData[4]">
+                    <span>Error message:</span>
+                    <span t-esc="EmailData[4]" style="color:darkred" />
+                </t>
+            </div>
+        </div>
+    </t>
+</template>
