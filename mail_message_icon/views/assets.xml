@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+    id="assets_backend"
+    name="mail_message_icon - backend assets"
+    inherit_id="web.assets_backend"
+  >
+        <xpath expr="." position="inside">
+            <script
+        type="text/javascript"
+        src="/mail_message_icon/static/src/js/mail_message_icon.js"
+      />
+        </xpath>
+    </template>
+    <template
+    id="assets_common"
+    name="mail_message_icon - common assets"
+    inherit_id="web.assets_common"
+  >
+        <xpath expr="link[last()]" position="after">
+            <link
+        rel="stylesheet"
+        type="text/css"
+        href="/mail_message_icon/static/src/css/styles.css"
+      />
+        </xpath>
+    </template>
+</odoo>
