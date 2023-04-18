@@ -6,7 +6,6 @@ from odoo import _, api, models
 class Meeting(models.Model):
     _inherit = "calendar.event"
 
-
     @api.model
     def create(self, values):
         """Whenever new event is created with applicant, create message with confirmation in applicant's chatter."""
