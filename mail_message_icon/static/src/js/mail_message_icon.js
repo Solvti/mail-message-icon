@@ -1,6 +1,7 @@
 odoo.define("mail_message.mail_message_icon", function (require) {
     "use strict";
 
+
     var core = require("web.core");
     var QWeb = core.qweb;
     var ThreadWidget = require("mail.widget.Thread");

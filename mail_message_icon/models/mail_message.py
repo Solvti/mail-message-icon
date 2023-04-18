@@ -8,13 +8,15 @@ class Message(models.Model):
         "res.partner",
         "event_partner_ids_rel",
         string="Event Partners",
-        help="Partner ids from event's attendees",
+        help="Partners from event's attendees",
     )
     event_message = fields.Char(help="Field that store information about event's status")
 
     @api.model
     def _message_read_dict_postprocess(self, messages, message_tree):
-        """Override the method to add extra information regarding email delivery status, visible in chatter.
+        """
+        Override method and add extra information regarding email delivery status.
+        Used to show more details about messages in chatter.
         ref: addons/mail/models/mail_message.py
         """
         res = super(Message, self)._message_read_dict_postprocess(messages, message_tree)
@@ -65,8 +67,9 @@ class Message(models.Model):
         return res
 
     def _get_mails_status(self):
-        """Return "general Message status"
-        Depends on all sent Mails
+        """
+        Get general message status that depends on status of all sent mails.
+        Returns General Message status.
         """
         self.ensure_one()
         mails_status = (
@@ -84,9 +87,9 @@ class Message(models.Model):
 
     @api.model
     def _get_email_data(self, mail, state, comment, bounced_partners, mails_status):
-        """Prepare and return emails data
-        - if there are recipient_ids, return list with each recipient's data
-        - if email_to is present, returns the list of those email addresses.
+        """Prepare and return emails data.
+        - if recipient_ids is set, return list with each recipient's data
+        - if email_to is set, returns the list of all email addresses.
         """
         email_list = []
         if mail.recipient_ids:

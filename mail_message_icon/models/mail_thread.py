@@ -6,9 +6,12 @@ class MailThread(models.AbstractModel):
 
     @api.returns("mail.message", lambda value: value.id)
     def message_post(self, **kwargs):
+        """Override:
+        Add extra information whenever creating a new message from calendar.event
+        """
         message = super(MailThread, self).message_post(**kwargs)
-        if self._context.get("event_meeting"):
-            event_id = self._context.get("event_meeting")
+        if self._context.get("message_calendar_event_id"):
+            event_id = self._context.get("message_calendar_event_id")
             if not isinstance(event_id, int):
                 raise ValueError("event id must be integer!")
             event = self.env["calendar.event"].browse([event_id])
@@ -18,9 +21,4 @@ class MailThread(models.AbstractModel):
                 message.event_message = event.event_message_error
             else:
                 message.event_message = False
-        if self._context.get("schedule_message"):
-            mail_id = self._context.get("schedule_message")
-            if not isinstance(mail_id, int):
-                raise ValueError("scheduled mail_id must be integer!")
-            message.mail_ids = [mail_id]
         return message
