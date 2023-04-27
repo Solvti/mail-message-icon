@@ -1,6 +1,6 @@
 {
-    "name": "Mail Message Icon",
-    "summary": "Better overview over sent messages in chatter.",
+    "name": "Advanced Mail Icons in Chatter",
+    "summary": "Additional mail icons, enabling faster identification of email statuses",
     "version": "13.0.1.0.1",
     "category": "Discuss",
     "author": "Solvti Sp. z o.o.",
