@@ -1,5 +1,5 @@
-Mail Message Icon
-=================
+Advanced Mail Icons in Chatter
+==============================
 
 This simple module adds a few additional mail icons to the chatter.
 There are extra colors that amplify a certain status:

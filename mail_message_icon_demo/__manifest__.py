@@ -1,6 +1,6 @@
 {
-    "name": "Mail Message Icon Demo",
-    "summary": "Mail Message Icon Demo Module used in Recruitment.",
+    "name": "Advanced Mail Icons in Chatter",
+    "summary": "Advanced Mail Icons in Chatter Demo Module used in Recruitment.",
     "version": "13.0.1.0.1",
     "category": "Mail",
     "author": "Solvti Sp. z o.o.",
