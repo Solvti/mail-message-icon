@@ -4,7 +4,7 @@
     "version": "13.0.1.0.1",
     "category": "Discuss",
     "author": "Solvti Sp. z o.o.",
-    "website": "https://solvti.pl",
+    "website": "https://www.solvti.pl",
     "company": "Solvti",
     "maintainer": "Solvti",
     "license": "GPL-3",
