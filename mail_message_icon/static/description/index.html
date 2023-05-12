@@ -11,8 +11,8 @@
     <script src="https://kit.fontawesome.com/ce9870b717.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div id="wrap" class="oe_structure oe_empty">
+<body style="font-family: poppins">
+    <div id="wrap" class="container" style="width: 1110px">
         <section class="s_text_image o_colored_level pb0 pt0" data-snippet="s_image_text" data-name="Image - Text"
             style="background-image: none;">
             <div class="container">
@@ -47,46 +47,37 @@
                 </div>
             </div>
         </section>
-        <section class="s_showcase pt48 pb48 o_colored_level" data-vcss="002" data-snippet="s_showcase"
-            data-name="Showcase" style="background-image: none;">
+        <section name="info" class="mb-5">
             <div class="container">
-                <div class="row g-0 s_col_no_resize s_col_no_bgcolor s_nb_column_fixed">
-                    <div class="col-lg text-lg-end">
-                        <div class="row">
-                            <div class="pt24 pb24 o_colored_level col-lg-12" data-name="Block"
-                                style="text-align: left;">This simple module adds a few additional mail icons to the
-                                chatter. There are extra colors that amplify a certain status: if the email was sent,
-                                bounced, not sent (server error etc.) or planned. There's also an additional toolbar on
-                                icon hover, so the small pop-up window that shows up when you put a cursor on&nbsp;the
-                                icon, containing more specific information of the email, like who's the recipient or
-                                what went wrong when sending an email if it failed.&nbsp;<br>Also, this module allows
-                                you to set up a note about newly created meetings, which will automatically show up in
-                                the chatter, however this requires code adjustments, see the link on the right how to do
-                                it.&nbsp;</div>
-                        </div>
+                <div class="row m-1">
+                    <div class="col-6 pt24">
+                        <p>
+                            This simple module adds a few additional mail icons to the
+                            chatter. There are extra colors that amplify a certain status: if the email was sent,
+                            bounced, not sent (server error etc.) or planned. There's also an additional toolbar on
+                            icon hover, so the small pop-up window that shows up when you put a cursor on the
+                            icon, containing more specific information of the email, like who's the recipient or
+                            what went wrong when sending an email if it failed.
+                        </p>
+                        <p>
+                            Also, this module allows
+                            you to set up a note about newly created meetings, which will automatically show up in
+                            the chatter, however this requires code adjustments, see the link on the right how to do
+                            it.
+                        </p>
                     </div>
-                    <div class="col-1">
-                        <div class="w-50 h-100 border-end"></div>
-                    </div>
-                    <div class="col-lg">
+                    <div class="col-6 border-left">
                         <div class="row">
-                            <div class="pt24 pb24 o_colored_level col-lg-9" data-name="Block">
-                                <div class="s_showcase_title d-flex mb-2">
-                                    <i class="fa fa-book"></i>
-                                    <h3> Useful links</h3>
+                            <div class="pt24 pb24 col">
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-book s_showcase_icon fa-2x text-secondary me-3"></i>
+                                    <h3>&nbsp;&nbsp;Resources</h3>
                                 </div>
-                                <p>
-                                    README <br>
-                                    https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon/README.rst
-                                </p>
-                                <p>
-                                    Example Calendar Implementation <br>    
-                                    https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon_demo/models/calendar_event.py
-                                </p>
-                                <p>
-                                   Demo Calendar Messages Icons <br>
-                                   https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon_demo/README.rst
-                                </p>
+                                <div class="ml-5">
+                                    <p>README:<br />https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon/README.rst</p>
+                                    <p>Example Calendar Implementation:<br />https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon_demo/models/calendar_event.py<br /></p>
+                                    <p>Demo Calendar Messages Icons:<br />https://github.com/Solvti/mail-message-icon/blob/13.0/mail_message_icon_demo/README.rst/</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -108,11 +99,11 @@
         </section>
         <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title"
         style="background-image: none;">
-            <div class="row">
-                <div class="col shadow m-1">
+            <div class="row mx-5">
+                <div class="col shadow m-3">
                     <div class="row justify-content-md-center pt-3 pb-3">
-                        <div class="col-3 align-self-center">
-                            <h2><i class="fa fa-envelope" style="color:#28a745" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#28a745" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
                         </div>
                         <div class="col-8 align-self-center">
                             <p><b>Green Mail Icon</b><br>
@@ -120,10 +111,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col shadow m-1">
+                <div class="col shadow m-3">
                     <div class="row justify-content-md-center pt-3 pb-3">
-                        <div class="col-3 align-self-center">
-                            <h2><i class="fa fa-envelope" style="color:#ffc107" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#ffc107" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
                         </div>
                         <div class="col-8 align-self-center">
                             <p><b>Yellow Mail Icon</b><br>
@@ -131,10 +122,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col shadow m-1">
+            </div>
+            <div class="row mx-5">
+                <div class="col shadow m-3">
                     <div class="row justify-content-md-center pt-3 pb-3">
-                        <div class="col-3 align-self-center">
-                            <h2><i class="fa fa-envelope" style="color:#dc3545" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#dc3545" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
                         </div>
                         <div class="col-8 align-self-center">
                             <p><b>Red Mail Icon</b><br>
@@ -142,10 +135,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col shadow m-1">
+                <div class="col shadow m-3">
                     <div class="row justify-content-md-center pt-3 pb-3">
-                        <div class="col-3 align-self-center">
-                            <h2><i class="fa fa-envelope" style="color:#7c7bad" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#7c7bad" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
                         </div>
                         <div class="col-8 align-self-center">
                             <p><b>Purple Mail Icon</b><br>
@@ -376,32 +369,16 @@
                 </div>
             </div>
         </section>
-        <section class="s_call_to_action o_cc pt48 pb24 o_colored_level" data-snippet="s_call_to_action"
-            data-name="Call to Action" style="background-image: none;background-color: #008DB0;">
-            <div class="container p-5">
-                <div class="row">
-                    <div class="pb16 o_colored_level col-lg-8">
-                        <h3 style="color: #FFFFFF;">
-                            <b>There's so much more we can do</b>
-                        </h3>
-                        <p>Go on, try us 😎</p>
+        <div class="container p-5">
+            <div class="row border-top">
+                <span name="support">
+                    <div class="jumbotron mt-3 mx-5">
+                        <h2>There's so much more we can do</h2>
+                        <p class="lead">Go on, try us</p>
+                        <a class="btn btn-lg btn-primary" href="mailto:sales@solvti.pl" role="button">Contact us</a>
                     </div>
-                    <div class="pt8 o_colored_level col-lg-4">
-                        <p style="text-align: right;">
-                            <lt-highlighter style="display: none; z-index: 1 !important;" data-lt-linked="1">
-                                <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                                    style="width: 126px !important; height: 46px !important; transform: none !important; transform-origin: 64px 24px !important; zoom: 1 !important; margin-top: 1px !important; margin-left: 283px !important;">
-                                    <lt-div class="lt-highlighter__scroll-element"
-                                        style="top: 0px !important; left: 0px !important; width: 131px !important; height: 51px !important;"></lt-div></lt-div>
-                            </lt-highlighter>
-                            <a class="mb-2" href="/contactus" title=""
-                                style="color: #212529;background-color: #69C1C2;border-color: #69C1C2;display: inline-block;font-weight: 400;line-height: 1.5;text-align: center;vertical-align: middle;cursor: pointer;user-select: none;border: 1px solid transparent;padding: 0.375rem 0.75rem;font-size: 1rem;border-radius: 0.25rem;transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">
-                                <font style="color: #F6F6F6 !important;">Contact us</font>
-                            </a>
-                        </p>
-                    </div>
-                </div>
+                </span>
             </div>
-        </section>
+        </div>
 
     </div>
