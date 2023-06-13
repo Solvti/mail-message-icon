@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<template>
+
+<templates xml:space="preserve">
+    <t t-name="mail_message_icon.thread_message_icon" t-inherit="mail.Message" t-inherit-mode="primary" owl="1">
+        <!-- <xpath expr="//a[@class='nav-link']" position="attributes">
+            <attribute name="t-on-click.prevent">() => this.changeTabTo(navItem[0])</attribute>
+        </xpath> -->
+    </t>
+</templates>
+<!-- <template>
     <t t-extend="mail.widget.Thread.Message">
         <t t-jquery="span.o_thread_tooltip_container" t-operation="after">
             <span t-if="options.displayEmailIcons">
@@ -91,4 +99,4 @@
             </div>
         </div>
     </t>
-</template>
+</template> -->
