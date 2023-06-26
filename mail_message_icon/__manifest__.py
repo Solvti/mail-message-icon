@@ -11,14 +11,17 @@
     "application": True,
     "installable": True,
     "auto_install": False,
-    "depends": ["mail", "calendar"],
+    "depends": ["mail", "snailmail", "calendar", "web"],
     "data": [
+        "wizard/mail_resend_message_views.xml",
         "views/mail_message_views.xml",
     ],
     "qweb": ["static/src/xml/mail_message_icon.xml"],
     'assets': {
+        'mail.assets_messaging': [
+            'mail_message_icon/static/src/models/*.js',
+        ],
         'web.assets_backend': [
-            'mail_message_icon/static/src/components/advance_message_icon/mail_message_icon.js',
             'mail_message_icon/static/src/components/advance_message_icon/thread_message_icon.xml',
         ],
         'web.assets_common': [
