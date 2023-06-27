@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <templates xml:space="preserve">
-    <t t-name="mail_message_icon.thread_message_icon" t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
-        <xpath expr="//i[@t-att-class='messageView.notificationIconClassName']" position="attributes">
-            <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
-        </xpath>
-        <xpath expr="//i[@t-att-class='messageView.failureNotificationIconClassName']" position="attributes">
-            <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
-        </xpath>
-        
-        <!-- <xpath expr="//t[@t-if='messageView.message.failureNotifications.length > 0']" position="before">
-            <t t-if="messageView.message.mailStatus === 'failure_status'">
-                <span class="o_Message_notificationIconClickable o-error cursor-pointer text-danger" role="button" tabindex="0" t-on-click="messageView.onClickFailure">
-                    <i class="o_Message_notificationIcon thisiserrorclass" t-att-class="messageView.failureNotificationIconClassName" role="img" aria-label="Delivery failure"/>
-                    <span t-if="messageView.failureNotificationIconLabel" t-out="messageView.failureNotificationIconLabel"/>
-                </span>
-            </t>
-            <t t-elif="messageView.message.mailStatus === 'bounce_status'">
-                <span class="o_Message_notificationIconClickable text-600 cursor-pointer text-warning" t-on-click="messageView.onClickNotificationIcon">
-                    <i class="o_Message_notificationIcon thisisbounceclass" t-att-class="messageView.notificationIconNewClassName"/>
-                    <span t-if="messageView.notificationIconLabel" t-out="messageView.notificationIconLabel"/>
-                </span>
-            </t>
-            <t t-elif="messageView.message.mailStatus === 'sent_status'">
-                <span class="o_Message_notificationIconClickable text-600 cursor-pointer text-success" t-on-click="messageView.onClickNotificationIcon">
-                    <i class="o_Message_notificationIcon thisissentclass" t-att-class="messageView.notificationIconNewClassName"/>
-                    <span t-if="messageView.notificationIconLabel" t-out="messageView.notificationIconLabel"/>
-                </span>
-            </t>
-            <t t-elif="messageView.message.mailStatus === 'ready_status'">
-                <span class="o_Message_notificationIconClickable text-600 cursor-pointer text-primary" t-on-click="messageView.onClickNotificationIcon">
-                    <i class="o_Message_notificationIcon thisisreadyclass" t-att-class="messageView.notificationIconNewClassName"/>
-                    <span t-if="messageView.notificationIconLabel" t-out="messageView.notificationIconLabel"/>
-                </span>
-            </t>
-        </xpath> -->
-    </t>
+  <t t-name="mail_message_icon.thread_message_icon" t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
+    <xpath expr="//t[@t-if='messageView.message.date']" position="after">
+      <t t-if="messageView.message.calendarEventNote">
+        <i class="fa fa-calendar" />
+      </t>
+    </xpath>
+    <xpath expr="//i[@t-att-class='messageView.notificationIconClassName']" position="attributes">
+      <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
+    </xpath>
+    <xpath expr="//i[@t-att-class='messageView.failureNotificationIconClassName']" position="attributes">
+      <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
+    </xpath>
+  </t>
 </templates>

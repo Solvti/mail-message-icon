@@ -1,7 +1,7 @@
 {
     "name": "Advanced Mail Icons in Chatter",
     "summary": "Advanced Mail Icons in Chatter Demo Module used in Recruitment.",
-    "version": "13.0.1.0.1",
+    "version": "16.0.1.0.0",
     "category": "Mail",
     "author": "Solvti Sp. z o.o.",
     "license": "GPL-3",

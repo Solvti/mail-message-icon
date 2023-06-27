@@ -17,15 +17,12 @@
         "views/mail_message_views.xml",
     ],
     "qweb": ["static/src/xml/mail_message_icon.xml"],
-    'assets': {
-        'mail.assets_messaging': [
-            'mail_message_icon/static/src/models/*.js',
+    "assets": {
+        "mail.assets_messaging": [
+            "mail_message_icon/static/src/models/*.js",
         ],
-        'web.assets_backend': [
-            'mail_message_icon/static/src/components/advance_message_icon/thread_message_icon.xml',
-        ],
-        'web.assets_common': [
-            'mail_message_icon/static/src/components/advance_message_icon/style.css',
+        "web.assets_backend": [
+            "mail_message_icon/static/src/components/advance_message_icon/thread_message_icon.xml",
         ],
     },
     "demo": [],
