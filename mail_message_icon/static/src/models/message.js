@@ -22,12 +22,12 @@ registerPatch({
      */
     openResendAction(mode = "") {
       if (this.message_type !== "sms" && mode !== "") {
-        this.env.services.action.doAction("mail.mail_resend_message_action", {
-          additionalContext: {
-            mail_message_to_resend: this.id,
-            mail_status_mode: mode,
-          },
-        });
+          this.env.services.action.doAction("mail.mail_resend_message_action", {
+            additionalContext: {
+              mail_message_to_resend: this.id,
+              mail_status_mode: mode,
+            },
+          });
       } else {
         this._super(...arguments);
       }

@@ -35,6 +35,18 @@
       <field name="author_id" ref="base.partner_demo" />
       <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4'),ref('base.res_partner_3')])]" />
     </record>
+    <record id="msg_case_dev1_notif_0" model="mail.notification">
+      <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
+      <field name="res_partner_id" ref="base.res_partner_4" />
+      <field name="notification_type">email</field>
+      <field name="notification_status">ready</field>
+    </record>
+    <record id="msg_case_dev1_notif_1" model="mail.notification">
+      <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
+      <field name="res_partner_id" ref="base.res_partner_3" />
+      <field name="notification_type">email</field>
+      <field name="notification_status">ready</field>
+    </record>
     <record id="mail_case_dev1_aplicant" model="mail.mail">
       <field name="subject">Outgoing Mail</field>
       <field name="model">hr.applicant</field>
@@ -68,6 +80,13 @@
       <field name="author_id" ref="base.partner_demo" />
       <field name="state">exception</field>
       <field name="failure_reason">Unable to connect to SMTP Server</field>
+    </record>
+    <record id="msg_case_dev2_notif_0" model="mail.notification">
+      <field name="mail_message_id" ref="msg_case_dev2_aplicant" />
+      <field name="res_partner_id" ref="base.res_partner_4" />
+      <field name="notification_type">email</field>
+      <field name="notification_status">exception</field>
+      <field name="failure_reason">Connection refused</field>
     </record>
     <record id="msg_case_dev3_aplicant" model="mail.message">
       <field name="subject">Bounced and Delivered Message in chatter</field>
@@ -129,6 +148,12 @@
       <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
       <field name="author_id" ref="base.partner_demo" />
       <field name="state">sent</field>
+    </record>
+    <record id="message_demo_partner_3_notif_0" model="mail.notification">
+      <field name="mail_message_id" ref="msg_case_dev5_aplicant" />
+      <field name="res_partner_id" ref="base.res_partner_3" />
+      <field name="notification_type">email</field>
+      <field name="notification_status">sent</field>
     </record>
   </data>
 </odoo>

@@ -27,15 +27,15 @@ registerPatch({
     notificationIconNewClassName: attr({
       compute() {
         if (this.message.mailStatus === "failure_status") {
-          return "fa fa-envelope text-danger";
+            return "fa fa-envelope text-danger";
         } else if (this.message.mailStatus === "sent_status") {
-          return "fa fa-envelope text-success";
+            return "fa fa-envelope text-success";
         } else if (this.message.mailStatus === "bounce_status") {
-          return "fa fa-envelope text-warning";
+            return "fa fa-envelope text-warning";
         } else if (this.message.mailStatus === "ready_status") {
-          return "fa fa-envelope text-primary";
+            return "fa fa-envelope text-primary";
         } else if (this.message.mailStatus === "canceled_status") {
-          return "fa fa-envelope text-mutes opacity-50";
+            return "fa fa-envelope text-mutes opacity-50";
         }
         return clear();
       },
