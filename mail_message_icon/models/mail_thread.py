@@ -11,8 +11,7 @@ class MailThread(models.AbstractModel):
         to be able to show attendance of event.
         """
         message = super(MailThread, self).message_post(**kwargs)
-        if self._context.get("create_note_from_event_id"):
-            event_id = self._context.get("create_note_from_event_id")
+        if event_id := self._context.get("create_note_from_event_id"):
             if not isinstance(event_id, int):
                 raise ValueError("Calendar event id must be integer!")
             event = self.env["calendar.event"].browse([event_id])

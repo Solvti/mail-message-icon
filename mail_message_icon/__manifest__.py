@@ -11,7 +11,7 @@
     "application": True,
     "installable": True,
     "auto_install": False,
-    "depends": ["mail", "snailmail", "calendar", "web"],
+    "depends": ["snailmail", "calendar"],
     "data": [
         "wizard/mail_resend_message_views.xml",
         "views/mail_message_views.xml",
@@ -23,6 +23,7 @@
         ],
         "web.assets_backend": [
             "mail_message_icon/static/src/components/advance_message_icon/thread_message_icon.xml",
+            "mail_message_icon/static/src/components/message_notification_popover_content/message_notification_popover_content.xml",
         ],
     },
     "demo": [],
