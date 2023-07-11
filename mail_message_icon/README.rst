@@ -11,6 +11,7 @@ when sending an email if it failed. Also, this module allows you to
 set up a note about newly created meetings, which will automatically show up in the chatter,
 however this requires code adjustments, see the link with an example code below.
 
+
 Configuration
 =============
 

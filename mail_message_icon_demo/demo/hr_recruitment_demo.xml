@@ -1,159 +1,159 @@
 <?xml version="1.0" ?>
 <odoo>
-  <data noupdate="0">
-    <record id="hr_recruitment.hr_case_dev0" model="hr.applicant">
-      <field name="email_from">Johan.Duck@example.com</field>
-    </record>
-    <record id="calendar_event_applicant_dev0" model="calendar.event">
-      <field name="active" eval="True" />
-      <field name="user_id" ref="base.user_demo" />
-      <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
-      <field name="name">Meeting inteview with applicant</field>
-      <field name="description">Meeting with applicant.</field>
-      <field name="start" eval="time.strftime('%Y-%m-03 10:20:00')" />
-      <field name="categ_ids" eval="[(6,0,[ref('calendar.categ_meet5')])]" />
-      <field name="stop" eval="time.strftime('%Y-%m-03 16:30:00')" />
-      <field name="duration" eval="6.3" />
-      <field name="allday" eval="False" />
-      <field name="applicant_id" ref="hr_recruitment.hr_case_dev0" />
-    </record>
-    <!-- Check Update -->
-    <record id="mail_message_icon_demo.calendar_event_applicant_dev0" model="calendar.event">
-      <field name="start" eval="time.strftime('%Y-%m-03 11:20:00')" />
-    </record>
-    <record id="msg_case_dev1_aplicant" model="mail.message">
-      <field name="subject">Outgoing Message in chatter</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="body" type="html">
-        <p>Hello,</p>
-        <p>This is my outgoing mail.</p>
-        <p>Kind regards,</p>
-      </field>
-      <field name="message_type">email</field>
-      <field name="subtype_id" ref="mail.mt_comment" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4'),ref('base.res_partner_3')])]" />
-    </record>
-    <record id="msg_case_dev1_notif_0" model="mail.notification">
-      <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
-      <field name="res_partner_id" ref="base.res_partner_4" />
-      <field name="notification_type">email</field>
-      <field name="notification_status">ready</field>
-    </record>
-    <record id="msg_case_dev1_notif_1" model="mail.notification">
-      <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
-      <field name="res_partner_id" ref="base.res_partner_3" />
-      <field name="notification_type">email</field>
-      <field name="notification_status">ready</field>
-    </record>
-    <record id="mail_case_dev1_aplicant" model="mail.mail">
-      <field name="subject">Outgoing Mail</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
-      <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_4'),ref('base.res_partner_3')])]" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="state">outgoing</field>
-      <field name="scheduled_date" eval="datetime.now() + timedelta(days=1)" />
-    </record>
-    <record id="msg_case_dev2_aplicant" model="mail.message">
-      <field name="subject">Failed Message in chatter</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="body" type="html">
-        <p>Hello,</p>
-        <p>This is my failed mail.</p>
-        <p>Kind regards,</p>
-      </field>
-      <field name="message_type">email</field>
-      <field name="subtype_id" ref="mail.mt_comment" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
-    </record>
-    <record id="mail_case_dev2_aplicant" model="mail.mail">
-      <field name="subject">Failed Mail</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="mail_message_id" ref="msg_case_dev2_aplicant" />
-      <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="state">exception</field>
-      <field name="failure_reason">Unable to connect to SMTP Server</field>
-    </record>
-    <record id="msg_case_dev2_notif_0" model="mail.notification">
-      <field name="mail_message_id" ref="msg_case_dev2_aplicant" />
-      <field name="res_partner_id" ref="base.res_partner_4" />
-      <field name="notification_type">email</field>
-      <field name="notification_status">exception</field>
-      <field name="failure_reason">Connection refused</field>
-    </record>
-    <record id="msg_case_dev3_aplicant" model="mail.message">
-      <field name="subject">Bounced and Delivered Message in chatter</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="body" type="html">
-        <p>Hello,</p>
-        <p>This is my Bounced and Delivered mail.</p>
-        <p>Kind regards,</p>
-      </field>
-      <field name="message_type">email</field>
-      <field name="subtype_id" ref="mail.mt_comment" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
-    </record>
-    <record id="mail_case_dev3_aplicant" model="mail.mail">
-      <field name="subject">Bounced Mail</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
-      <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="state">sent</field>
-    </record>
-    <record id="message_demo_partner_5_notif_0" model="mail.notification">
-      <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
-      <field name="res_partner_id" ref="base.res_partner_2" />
-      <field name="notification_type">email</field>
-      <field name="notification_status">bounce</field>
-    </record>
-    <record id="mail_case_dev4_aplicant" model="mail.mail">
-      <field name="subject">Delivered Mail</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
-      <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_2')])]" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="state">sent</field>
-    </record>
-    <record id="msg_case_dev5_aplicant" model="mail.message">
-      <field name="subject">Delivered Message in chatter</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="body" type="html">
-        <p>Hello,</p>
-        <p>This is my delivered mail.</p>
-        <p>Kind regards,</p>
-      </field>
-      <field name="message_type">email</field>
-      <field name="subtype_id" ref="mail.mt_comment" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
-    </record>
-    <record id="mail_case_dev6_aplicant" model="mail.mail">
-      <field name="subject">Delivered Mail</field>
-      <field name="model">hr.applicant</field>
-      <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
-      <field name="mail_message_id" ref="msg_case_dev5_aplicant" />
-      <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
-      <field name="author_id" ref="base.partner_demo" />
-      <field name="state">sent</field>
-    </record>
-    <record id="message_demo_partner_3_notif_0" model="mail.notification">
-      <field name="mail_message_id" ref="msg_case_dev5_aplicant" />
-      <field name="res_partner_id" ref="base.res_partner_3" />
-      <field name="notification_type">email</field>
-      <field name="notification_status">sent</field>
-    </record>
-  </data>
+    <data noupdate="0">
+        <record id="hr_recruitment.hr_case_dev0" model="hr.applicant">
+            <field name="email_from">Johan.Duck@example.com</field>
+        </record>
+        <record id="calendar_event_applicant_dev0" model="calendar.event">
+            <field name="active" eval="True" />
+            <field name="user_id" ref="base.user_demo" />
+            <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
+            <field name="name">Meeting inteview with applicant</field>
+            <field name="description">Meeting with applicant.</field>
+            <field name="start" eval="time.strftime('%Y-%m-03 10:20:00')" />
+            <field name="categ_ids" eval="[(6,0,[ref('calendar.categ_meet5')])]" />
+            <field name="stop" eval="time.strftime('%Y-%m-03 16:30:00')" />
+            <field name="duration" eval="6.3" />
+            <field name="allday" eval="False" />
+            <field name="applicant_id" ref="hr_recruitment.hr_case_dev0" />
+        </record>
+        <!-- Check Update -->
+        <record id="mail_message_icon_demo.calendar_event_applicant_dev0" model="calendar.event">
+            <field name="start" eval="time.strftime('%Y-%m-03 11:20:00')" />
+        </record>
+        <record id="msg_case_dev1_aplicant" model="mail.message">
+            <field name="subject">Outgoing Message in chatter</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="body" type="html">
+                <p>Hello,</p>
+                <p>This is my outgoing mail.</p>
+                <p>Kind regards,</p>
+            </field>
+            <field name="message_type">email</field>
+            <field name="subtype_id" ref="mail.mt_comment" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4'),ref('base.res_partner_3')])]" />
+        </record>
+        <record id="msg_case_dev1_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
+            <field name="res_partner_id" ref="base.res_partner_4" />
+            <field name="notification_type">email</field>
+            <field name="notification_status">ready</field>
+        </record>
+        <record id="msg_case_dev1_notif_1" model="mail.notification">
+            <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
+            <field name="res_partner_id" ref="base.res_partner_3" />
+            <field name="notification_type">email</field>
+            <field name="notification_status">ready</field>
+        </record>
+        <record id="mail_case_dev1_aplicant" model="mail.mail">
+            <field name="subject">Outgoing Mail</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="mail_message_id" ref="msg_case_dev1_aplicant" />
+            <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_4'),ref('base.res_partner_3')])]" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="state">outgoing</field>
+            <field name="scheduled_date" eval="datetime.now() + timedelta(days=1)" />
+        </record>
+        <record id="msg_case_dev2_aplicant" model="mail.message">
+            <field name="subject">Failed Message in chatter</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="body" type="html">
+                <p>Hello,</p>
+                <p>This is my failed mail.</p>
+                <p>Kind regards,</p>
+            </field>
+            <field name="message_type">email</field>
+            <field name="subtype_id" ref="mail.mt_comment" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
+        </record>
+        <record id="mail_case_dev2_aplicant" model="mail.mail">
+            <field name="subject">Failed Mail</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="mail_message_id" ref="msg_case_dev2_aplicant" />
+            <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="state">exception</field>
+            <field name="failure_reason">Unable to connect to SMTP Server</field>
+        </record>
+        <record id="msg_case_dev2_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="msg_case_dev2_aplicant" />
+            <field name="res_partner_id" ref="base.res_partner_4" />
+            <field name="notification_type">email</field>
+            <field name="notification_status">exception</field>
+            <field name="failure_reason">Connection refused</field>
+        </record>
+        <record id="msg_case_dev3_aplicant" model="mail.message">
+            <field name="subject">Bounced and Delivered Message in chatter</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="body" type="html">
+                <p>Hello,</p>
+                <p>This is my Bounced and Delivered mail.</p>
+                <p>Kind regards,</p>
+            </field>
+            <field name="message_type">email</field>
+            <field name="subtype_id" ref="mail.mt_comment" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_4')])]" />
+        </record>
+        <record id="mail_case_dev3_aplicant" model="mail.mail">
+            <field name="subject">Bounced Mail</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
+            <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="state">sent</field>
+        </record>
+        <record id="message_demo_partner_5_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
+            <field name="res_partner_id" ref="base.res_partner_2" />
+            <field name="notification_type">email</field>
+            <field name="notification_status">bounce</field>
+        </record>
+        <record id="mail_case_dev4_aplicant" model="mail.mail">
+            <field name="subject">Delivered Mail</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="mail_message_id" ref="msg_case_dev3_aplicant" />
+            <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_2')])]" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="state">sent</field>
+        </record>
+        <record id="msg_case_dev5_aplicant" model="mail.message">
+            <field name="subject">Delivered Message in chatter</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="body" type="html">
+                <p>Hello,</p>
+                <p>This is my delivered mail.</p>
+                <p>Kind regards,</p>
+            </field>
+            <field name="message_type">email</field>
+            <field name="subtype_id" ref="mail.mt_comment" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="partner_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
+        </record>
+        <record id="mail_case_dev6_aplicant" model="mail.mail">
+            <field name="subject">Delivered Mail</field>
+            <field name="model">hr.applicant</field>
+            <field name="res_id" ref="hr_recruitment.hr_case_dev0" />
+            <field name="mail_message_id" ref="msg_case_dev5_aplicant" />
+            <field name="recipient_ids" eval="[(6,0,[ref('base.res_partner_3')])]" />
+            <field name="author_id" ref="base.partner_demo" />
+            <field name="state">sent</field>
+        </record>
+        <record id="message_demo_partner_3_notif_0" model="mail.notification">
+            <field name="mail_message_id" ref="msg_case_dev5_aplicant" />
+            <field name="res_partner_id" ref="base.res_partner_3" />
+            <field name="notification_type">email</field>
+            <field name="notification_status">sent</field>
+        </record>
+    </data>
 </odoo>
