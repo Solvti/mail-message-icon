@@ -16,7 +16,6 @@
         "wizard/mail_resend_message_views.xml",
         "views/mail_message_views.xml",
     ],
-    "qweb": ["static/src/xml/mail_message_icon.xml"],
     "assets": {
         "mail.assets_messaging": [
             "mail_message_icon/static/src/models/*.js",
