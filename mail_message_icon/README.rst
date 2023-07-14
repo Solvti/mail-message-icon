@@ -4,12 +4,12 @@ Advanced Mail Icons in Chatter
 This simple module adds a few additional mail icons to the chatter.
 There are extra colors that amplify a certain status:
 if the email was sent, bounced, not sent (server error etc.) or planned.
-There's also an additional toolbar on icon hover, so the small pop-up window
-that shows up when you put a cursor on the icon, containing more specific
-information of the email, like who's the recipient or what went wrong
-when sending an email if it failed. Also, this module allows you to
-set up a note about newly created meetings, which will automatically show up in the chatter,
-however this requires code adjustments, see the link with an example code below.
+There's also an additional email information when clicking icon, so the small pop-up window shows up.
+Failed emails have extra information about Status in Sending Failures Wizard.
+Also, this module allows you to set up a note about newly created meetings,
+which will automatically show up in the chatter,
+however this requires code adjustments, see the link with an example code below or install mail_message_icon_demo
+where such set up has been configured with recruitment app.
 
 
 Configuration
