@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mail Message Icon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ce9870b717.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="font-family: poppins">
+    <div id="wrap" class="container" style="width: 1110px">
+        <section class="s_text_image o_colored_level pb0 pt0" data-snippet="s_image_text" data-name="Image - Text"
+            style="background-image: none;">
+            <div class="container">
+                <div class="row o_grid_mode" style="" data-row-count="3">
+                    <div class="o_colored_level o_grid_item g-col-lg-3 o_grid_item_image g-height-3 col-lg-3 o_grid_item_image_contain"
+                        style="grid-area: 1 / 1 / 4 / 4; z-index: 1;">
+                        <img src="images/solvti-logo.png" alt=""
+                            class="img img-fluid o_we_custom_image me-auto float-start" data-bs-original-title=""
+                            title="" aria-describedby="tooltip154443" style="" loading="lazy">
+                    </div>
+                    <div class="o_colored_level o_grid_item o_grid_item_image o_grid_item_image_contain g-height-2 g-col-lg-3 col-lg-3"
+                        style="z-index: 1; grid-area: 2 / 4 / 4 / 7;">
+                        <h3>We solve real business problems</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="background-image: none;">
+            <div class="s_allow_columns container">
+                <div class="row o_grid_mode" style="" data-row-count="4">
+                    <div class="o_grid_item o_colored_level g-col-lg-12 g-height-4 col-lg-12"
+                        style="grid-area: 1 / 1 / 5 / 13; z-index: 1;">
+                        <h1 style="text-align: center;">
+                            <font style="font-size: 62px;">Advanced Mail Icons in Chatter</font>
+                            <br>
+                        </h1>
+                        <h3 style="text-align: center;">
+                            <i>Additional mail icons, enabling faster identification of email statuses</i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section name="info" class="mb-5">
+            <div class="container">
+                <div class="row m-1">
+                    <div class="col-6 pt24">
+                        <p>
+                            This simple module adds a few additional mail icons to the chatter.
+                            There are extra colors that amplify a certain status:
+                            if the email was sent, bounced, not sent (server error etc.) or planned.
+                            There's also an additional email information when clicking icon, so the small pop-up window shows up.
+                            Failed emails have extra information about Status in Sending Failures Wizard.
+                        </p>
+                        <p>
+                            Also, this module allows you to set up a note about newly created meetings,
+                            which will automatically show up in the chatter,
+                            however this requires code adjustments, see the link with an example code below or install mail_message_icon_demo
+                            where such set up has been configured with recruitment app.
+                        </p>
+                    </div>
+                    <div class="col-6 border-left">
+                        <div class="row">
+                            <div class="pt24 pb24 col">
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-book s_showcase_icon fa-2x text-secondary me-3"></i>
+                                    <h3>&nbsp;&nbsp;Resources</h3>
+                                </div>
+                                <div class="ml-5">
+                                    <p>README:<br />https://github.com/Solvti/mail-message-icon/blob/16.0/mail_message_icon/README.rst</p>
+                                    <p>Example Calendar Implementation:<br />https://github.com/Solvti/mail-message-icon/blob/16.0/mail_message_icon_demo/models/calendar_event.py<br /></p>
+                                    <p>Demo Calendar Messages Icons:<br />https://github.com/Solvti/mail-message-icon/blob/16.0/mail_message_icon_demo/README.rst/</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_title pt40 o_colored_level pb0" data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="background-image: none;">
+            <div class="container s_allow_columns">
+                <div class="s_hr text-start pt32 pb32" data-snippet="s_hr" data-name="Separator">
+                    <hr class="w-100 mx-auto" style="border-top: 1px solid rgb(206, 212, 218);">
+                </div>
+                <h1 style="text-align: left;">✉️ Additional mail icon colors
+                </h1>
+                <p style="text-align: left;">
+                    <font class="text-600">4 new colors that'll help you identify email statuses</font>
+                </p>
+            </div>
+        </section>
+        <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title"
+        style="background-image: none;">
+            <div class="row mx-5">
+                <div class="col shadow m-3">
+                    <div class="row justify-content-md-center pt-3 pb-3">
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#28a745" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        </div>
+                        <div class="col-8 align-self-center">
+                            <p><b>Green Mail Icon</b><br>
+                                The email was sent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col shadow m-3">
+                    <div class="row justify-content-md-center pt-3 pb-3">
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#ffc107" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        </div>
+                        <div class="col-8 align-self-center">
+                            <p><b>Yellow Mail Icon</b><br>
+                                The email got bounced</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-5">
+                <div class="col shadow m-3">
+                    <div class="row justify-content-md-center pt-3 pb-3">
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#dc3545" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        </div>
+                        <div class="col-8 align-self-center">
+                            <p><b>Red Mail Icon</b><br>
+                                Email couldn't be send</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col shadow m-3">
+                    <div class="row justify-content-md-center pt-3 pb-3">
+                        <div class="col-2 align-self-center">
+                            <h1><i class="fa fa-envelope" style="color:#7c7bad" data-bs-original-title="" title="" aria-describedby="tooltip129206"></i></h2>
+                        </div>
+                        <div class="col-8 align-self-center">
+                            <p><b>Purple Mail Icon</b><br>
+                                The email is planned</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_image_text" data-name="Image - Text"
+        style="background: rgba(0, 0, 0, 0)">
+            <div class="container">
+                <div class="row align-items-center shadow">
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <img src="images/image-01.png" alt="" class="img img-fluid mx-auto o_we_custom_image"
+                            data-resize-width="undefined" data-bs-original-title="" title=""
+                            aria-describedby="tooltip53152" loading="lazy" style="">
+                    </div>
+                    <div class="col-lg-6 pt16 pb16 o_colored_level">
+                        <h2>👀 How they present in the Chatter</h2>
+                        <p>This helps to identify what happened with each mail.</p>
+                        <p>Each email in the Chatter that would normally have a gray mail Icon, will now have it in one
+                            of those colors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_title pt40 pb40 o_colored_level o_we_force_no_transition" data-vcss="001"
+            data-snippet="s_title" data-name="Title" style="background: rgba(0, 0, 0, 0)">
+            <div class="s_allow_columns container">
+                <div class="row shadow o_we_force_no_transition">
+                    <div class="o_colored_level col-lg-6 o_we_force_no_transition">
+                        <div class="o_text_columns">
+                            <div class="row">
+                                <div class="o_colored_level col-lg-12 o_we_force_no_transition">
+                                    <p></p>
+                                    <h1 style="text-align: left;">✨ Extra tooltip on hover</h1>
+                                    <p style="text-align: left;">
+                                        <font class="text-600">This helps to identify what happened with each mail.
+                                        </font>
+                                    </p>
+                                    <h3 style="text-align: left;">Each email in the Chatter that would normally have a
+                                        gray mail Icon, will now have it in one of those colors.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_colored_level col-lg-6 o_we_force_no_transition">
+                        <div class="o_text_columns">
+                            <div class="row">
+                                <div class="o_colored_level col-lg-12 o_we_force_no_transition" style="padding: 20px">
+                                    <p></p>
+                                    <h1 style="text-align: left;">
+                                        <img src="images/gif-01.gif" alt=""
+                                            class="img img-fluid o_we_custom_image o_we_force_no_transition"
+                                            loading="lazy" style="">
+                                        <br>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_title pt40 o_colored_level pb0" data-vcss="001" data-snippet="s_title" data-name="Title"
+        style="background: rgba(0, 0, 0, 0)">
+            <div class="container s_allow_columns">
+                <h2 style="text-align: center;">Examples of Tooltips</h2>
+            </div>
+        </section>
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm m-3 shadow">
+                        <img src="images\image-02.png" alt=""
+                            class="img img-fluid o_we_custom_image" data-bs-original-title="" title="" data-mimetype="image/png"
+                            loading="lazy"><br>
+                    </div>
+                    <div class="col-sm m-3 shadow">
+                        <img src="images/image-04.png" alt=""
+                            class="img img-fluid o_we_custom_image" data-bs-original-title="" title="" data-mimetype="image/png"
+                            loading="lazy"><br>
+                    </div>
+                    <div class="col-sm m-3 shadow">
+                        <img src="images/image-05.png" alt=""
+                            class="img img-fluid o_we_custom_image" data-bs-original-title="" title="" data-mimetype="image/png"
+                            loading="lazy"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="s_title pt40 pb40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="background-image: none;">
+            <div class="container s_allow_columns">
+                <h1 style="text-align: center;">
+                    <font style="font-size: 62px;">✅ Support</font>
+                </h1>
+                <p style="text-align: center;">We offer <strong>90 day </strong>support&nbsp;from the date of the
+                    purchase to every app.</p>
+                <p style="text-align: center;"><lt-highlighter style="display: none; z-index: auto !important;"
+                        data-lt-linked="1">
+                        <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                            style="width: 127.609px !important; height: 36px !important; transform: none !important; transform-origin: 64.8047px 19px !important; zoom: 1 !important; margin-top: 1px !important; margin-left: 581.188px !important;">
+
+                            <lt-div class="lt-highlighter__scroll-element"
+                                style="top: 0px !important; left: 0px !important; width: 127.609px !important; height: 36px !important;"></lt-div></lt-div></lt-highlighter>
+                    <a href="mailto:support@solvti.pl" title=""
+                        style="color: #212529;background-color: #69C1C2;border-color: #69C1C2;display: inline-block;font-weight: 400;line-height: 1.5;text-align: center;vertical-align: middle;cursor: pointer;user-select: none;border: 1px solid transparent;padding: 0.375rem 0.75rem;font-size: 1rem;border-radius: 0.25rem;transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">
+                        <font style="color: #F6F6F6 !important;">Submit a ticket</font>
+                    </a><br>
+                </p>
+            </div>
+        </section>
+        <section class="s_title pt40 pb40 o_colored_level o_cc" data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="position: relative;background-color: #008DB0;">
+            <div class="s_allow_columns container-fluid">
+                <h1 style="text-align: center;">
+                    <font style="font-size: 62px; color: #FFFFFF;">WE SOLVE REAL BUSINESS PROBLEMS</font>
+                    <br>
+                </h1>
+            </div>
+        </section>
+        <section class="s_title o_colored_level pb0 pt104 o_cc" data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="background-image: none;color: #409d9e;">
+            <div class="container s_allow_columns">
+                <h1 style="text-align: center;">
+                    <font style="font-size: 62px;color: #69C1C2;">We also offer</font>
+                    <br>
+                </h1>
+            </div>
+        </section>
+        <section class="s_features pb32 o_colored_level pt0 o_cc" data-snippet="s_features" data-name="Features"
+            style="background-image: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <a href="https://www.solvti.pl/our-services/#Odoo-ERP" data-lt-tmp-id="lt-829487"
+                            spellcheck="false" data-gramm="false" data-bs-original-title="" title="">
+                            <div class="shadow" style="margin:20px; padding:20px">
+                                <lt-highlighter style="display: none; z-index: 1 !important;" data-lt-linked="1">
+                                    <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                                        style="width: 308.609px !important; height: 206.391px !important; transform: none !important; transform-origin: 154.305px 103.195px !important; zoom: 1 !important; margin-left: 50.6876px !important; margin-top: 2.5e-05px !important;">
+                                        <lt-div class="lt-highlighter__scroll-element"
+                                            style="top: 0px !important; left: 0px !important; width: 314px !important; height: 211px !important;"></lt-div></lt-div>
+                                </lt-highlighter>
+                                <i class="fa fa-gear m-3 rounded fa-5x" title=""
+                                    style="background-color: rgb(113, 75, 103);color: #F6F6F6 !important;"></i>
+                                <h3>
+                                    <font class="text-o-color-5">Odoo Implementation</font>
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <a href="https://www.solvti.pl/our-services#Software-development" data-lt-tmp-id="lt-964306"
+                            spellcheck="false" data-gramm="false" data-bs-original-title="" title="">
+                            <div class="shadow" style="margin:20px; padding:20px">
+                                <lt-highlighter style="display: none; z-index: auto !important;" data-lt-linked="1">
+                                    <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                                        style="width: 410px !important; height: 130.344px !important; transform: none !important; transform-origin: 0px 0px !important; zoom: 1 !important; margin-left: 0.015625px !important; margin-top: 68.0469px !important;">
+                                        <lt-div class="lt-highlighter__scroll-element"
+                                            style="top: 0px !important; left: 0px !important; width: 410px !important; height: 130px !important;"></lt-div></lt-div>
+                                </lt-highlighter>
+                                <i class="fa fa-magic rounded m-3 fa-5x" data-bs-original-title="" title=""
+                                    style="color: #F6F6F6 !important;background-color: #008DB0"></i>
+                                <h3>
+                                    <font class="text-o-color-5">Custom Development</font>
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 pt32 pb32 text-center o_colored_level">
+                        <a href="https://www.solvti.pl/our-services#IT-Support" data-lt-tmp-id="lt-910770"
+                            spellcheck="false" data-gramm="false" data-bs-original-title="" title="">
+                            <div class="shadow" style="margin:20px; padding:20px">
+                                <lt-highlighter style="display: none; z-index: auto !important;" data-lt-linked="1">
+                                    <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                                        style="width: 410px !important; height: 130.344px !important; transform: none !important; transform-origin: 0px 0px !important; zoom: 1 !important; margin-left: -5e-05px !important; margin-top: 68.0469px !important;">
+                                        <lt-div class="lt-highlighter__scroll-element"
+                                            style="top: 0px !important; left: 0px !important; width: 410px !important; height: 130px !important;"></lt-div></lt-div>
+                                </lt-highlighter>
+                                <i class="fa fa-life-bouy m-3 rounded fa-5x" data-bs-original-title="" title=""
+                                    style="color: #F6F6F6 !important;background-color:#383E45 !important;"></i>
+                                <h3>
+                                    <font class="text-o-color-5">Support Services</font>
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s_text_image pb64 o_colored_level o_cc pt0 o_half_screen_height" data-snippet="s_text_image"
+            data-name="Text - Image" style="position: relative; background-image: none;color: #409d9e;">
+            <div class="container p-5">
+                <div class="row o_grid_mode" style="" data-row-count="11">
+                    <div class="o_colored_level o_grid_item g-height-8 g-col-lg-5 col-lg-5"
+                        style="grid-area: 1 / 1 / 9 / 6; z-index: 1;">
+                        <h1 style="color: #69C1C2;">Who we are</h1>
+                        <p>
+                            <br>
+                        </p>
+                        <p>Solvti is a software company based in Wrocław, Poland, with customers across the whole
+                            Europe. We're a certified Odoo Partner, with projects in both Odoo Enterprise and Odoo
+                            Community.</p>
+                        <p>Solvti was founded in 2021 with the mission not only to deliver software, but to solve the
+
+
+
+                            <strong>real </strong>business problems.
+
+
+                        </p>
+                    </div>
+                    <div class="o_colored_level o_grid_item g-col-lg-6 g-height-9 col-lg-6 o_grid_item_image"
+                        style="grid-area: 1 / 7 / 10 / 13; z-index: 2;">
+                        <img src="images/solvti-border.svg" alt=""
+                            class="img img-fluid mx-auto o_we_custom_image o_we_image_cropped"
+                            data-shape="web_editor/line/line_square_1" data-shape-colors=";#68C0C1;;;"
+                            data-original-id="268" data-original-src="/images/image-03.jpg"
+                            data-mimetype="image/svg+xml" data-original-mimetype="image/jpeg"
+                            data-file-name="IMG_7381.svg" data-x="245.1501556294945" data-y="94.4960466530715"
+                            data-width="1586.776859504132" data-height="1057.8512396694214" data-scale-x="1"
+                            data-scale-y="1" data-aspect-ratio="0/0" data-bs-original-title="" title=""
+                            aria-describedby="tooltip980093" loading="lazy" style="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container p-5">
+            <div class="row border-top">
+                <span name="support">
+                    <div class="jumbotron mt-3 mx-5">
+                        <h2>There's so much more we can do</h2>
+                        <p class="lead">Go on, try us</p>
+                        <a class="btn btn-lg btn-primary" href="mailto:sales@solvti.pl" role="button">Contact us</a>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+    </div>

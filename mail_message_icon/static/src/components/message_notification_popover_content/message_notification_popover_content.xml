@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t
+        t-name="mail_message_icon.MessageNotificationPopoverContent"
+        t-inherit="mail.MessageNotificationPopoverContent"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//span[@class='o_MessageNotificationPopoverContent_notificationPartnerName']" position="after">
+            <t t-if="notification.partner.email">
+                <div style="padding-left: 3px;display: inline;">
+                    <b>
+                        <span>&lt;</span>
+                        <span t-esc="notification.partner.email" />
+                        <span>&gt;</span>
+                    </b>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

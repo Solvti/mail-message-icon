@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="mail_message_icon.thread_message_icon" t-inherit="mail.Message" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='messageView.message.date']" position="after">
+            <t t-if="messageView.message.calendarEventNote">
+                <i class="fa fa-calendar" />
+            </t>
+        </xpath>
+        <xpath expr="//i[@t-att-class='messageView.notificationIconClassName']" position="attributes">
+            <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
+        </xpath>
+        <xpath expr="//i[@t-att-class='messageView.failureNotificationIconClassName']" position="attributes">
+            <attribute name="t-att-class">messageView.notificationIconNewClassName</attribute>
+        </xpath>
+    </t>
+</templates>

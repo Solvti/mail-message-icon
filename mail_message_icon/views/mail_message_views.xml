@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <record id="mail_message_view_form" model="ir.ui.view">
+        <field name="name">mail.message.view.form.inherit.mail_info</field>
+        <field name="model">mail.message</field>
+        <field name="inherit_id" ref="mail.mail_message_view_form" />
+        <field name="arch" type="xml">
+            <field name="notification_ids" position="after">
+                <field name="mail_ids">
+                    <tree>
+                        <field name="state" />
+                        <field name="failure_reason" />
+                        <field name="email_to" />
+                        <field name="recipient_ids" widget="many2many_tags" />
+                        <field name="email_cc" />
+                        <field name="is_notification" />
+                        <field name="scheduled_date" />
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+</odoo>
