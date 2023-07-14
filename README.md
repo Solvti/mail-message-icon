@@ -21,28 +21,28 @@ icons can be shown only after custom implementation in the modules where there i
 
 # Bug Tracker
 
-Bugs are tracked on `GitHub Issues <https://github.com/solvti/mail-message-icon/issues>`_. In case of trouble, please check there if your
+Bugs are tracked on [GitHub Issues](https://github.com/solvti/mail-message-icon/issues). In case of trouble, please check there if your
 issue has already been reported. If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/solvti/mail-message-icon/issues/new?body=module:%20mail_message_icon%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+[feedback](https://github.com/solvti/mail-message-icon/issues/new?body=module:%20mail_message_icon%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**).
 
 # Credits
 
 Authors
 
 ```
-
 * Solvti Sp. z o.o.
 * stefan.wiselka@solvti.pl
-
-Contributors
 ```
 
-- Stefan Wisełka <stefan.wiselka@solvti.pl>
+Contributors
+
+```
+* Stefan Wisełka <stefan.wiselka@solvti.pl>
+```
 
 Maintainers
 
 ```
-
 * Solvti Sp. z o.o.
 * stefan.wiselka@solvti.pl
 ```
